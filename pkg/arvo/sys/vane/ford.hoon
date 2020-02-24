@@ -6133,7 +6133,8 @@
 ++  call
   |=  [=duct dud=(unit goof) type=* wrapped-task=(hobo task:able)]
   ^-  [(list move) _ford-gate]
-  ?<  ?=(^ dud)
+  ?^  dud
+    ~|(%ford-call-dud (mean tang.u.dud))
   ::
   =/  task=task:able  ((harden task:able) wrapped-task)
   ::  we wrap +per-event with a call that binds our event args
@@ -6247,7 +6248,8 @@
 ++  take
   |=  [=wire =duct dud=(unit goof) wrapped-sign=(hypo sign)]
   ^-  [(list move) _ford-gate]
-  ?<  ?=(^ dud)
+  ?^  dud
+    ~|(%ford-take-dud (mean tang.u.dud))
   ::  unwrap :sign, ignoring unneeded +type in :p.wrapped-sign
   ::
   =/  =sign  q.wrapped-sign
