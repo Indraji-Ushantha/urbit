@@ -24,10 +24,11 @@ pkgs.stdenv.mkDerivation rec {
   name         = "herb";
   buildInputs  = [ pyenv ];
   unpackPhase  = "true";
+  src          = ../../../pkg/herb;
   installPhase = ''
     mkdir -p $out/bin
 
-    cp ${./herb} $out/bin/herb.py
+    cp $src/herb $out/bin/herb.py
 
     cat > $out/bin/herb <<EOF
     #!/usr/bin/env bash
